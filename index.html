@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expenses Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Monthly Expenses Generator</h1>
+        <form id="product-form">
+            <div>
+                <label for="product-name">Product Name:</label>
+                <input type="text" id="product-name" required>
+            </div>
+            <div>
+                <label for="product-amount">Amount:</label>
+                <input type="number" id="product-amount" required>
+            </div>
+            <button type="submit">Add Product</button>
+        </form>
+        <table id="product-table">
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <div class="total">
+            <h2>Total: $<span id="total-amount">0</span></h2>
+        </div>
+        <button id="generate-pdf">Generate PDF</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
